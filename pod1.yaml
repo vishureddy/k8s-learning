@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:pod
+spec:
+  containers:
+    - name: nginx-vishu
+      image: nginx:1.23
+      ports:
+      - containerPort: 8080
+    - name: web-watcher
+      image: afakharany/watcher

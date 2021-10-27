@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: helloworld-controller
-  labesl:
+  labels:
     app: helloworld
 spec:
   replicas: 10

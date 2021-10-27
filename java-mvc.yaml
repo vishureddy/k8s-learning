@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  pod: java-mvc
+spec:
+  containers:
+  - name: java-mvc-pod
+    image: visweswar1/java-docker:0.1
+    ports:
+      - name: java-mvc-port
+        containerPort: 
+    

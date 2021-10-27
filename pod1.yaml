@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: nginx-vishu
-      image: nginx:1.23
+      image: nginx:1.21.3
       ports:
       - containerPort: 8080
     - name: web-watcher

@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-pod
+spec:
+  containers:
+  - name: mysql-db
+    image: mysql:latest
+    env:
+      - name: username
+        valueFrom:
+          secretKeyRef:
+            name: helloworld-secrets
+            key: username
+      - name: password
+        valueFrom:
+          secretKeyRef:
+            name: helloworld-secrets
+            key: password
+      - name: rootPassword
+        valueFrom:
+          secretKeyRef:
+            name: helloworld-secrets
+            key: rootPassword
+      - name: database
+        valueFrom:
+          secretKeyRef:
+            name: helloworld-secrets
+            key: database

@@ -8,9 +8,9 @@ spec:
     matchLabels:
       app: helloworld
   template:
-  metadata:
-    labels:
-      app: helloworld
+    metadata:
+      labels:
+        app: helloworld
   spec:
     containers:
       - name: k8s-demo

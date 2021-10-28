@@ -6,13 +6,16 @@ spec:
   containers:
   - name: mysql-db
     image: mysql:latest
+    ports:
+    - name: mysql-port
+      containerPort: 3306
     env:
-      - name: username
+      - name: MYSQL_USER
         valueFrom:
           secretKeyRef:
             name: helloworld-secrets
             key: username
-      - name: password
+      - name: MYSQL_PASSWORD
         valueFrom:
           secretKeyRef:
             name: helloworld-secrets
@@ -22,7 +25,7 @@ spec:
           secretKeyRef:
             name: helloworld-secrets
             key: rootPassword
-      - name: database
+      - name: MYSQL_DATABASE
         valueFrom:
           secretKeyRef:
             name: helloworld-secrets
